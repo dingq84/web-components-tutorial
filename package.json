@@ -6,6 +6,9 @@
   "dependencies": {
     "gulp": "^4.0.2"
   },
+  "scripts": {
+    "start": "gulp dev"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
