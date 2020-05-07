@@ -33,7 +33,7 @@ const host = document.createElement('div');
 const shadowRoot = host.attachShadow({ mode: 'open' });
 ```
 #### Shadow Host
-&emsp;&emsp;程式碼內的 host 變數就是 shadow host ，為 Light DOM 被 Shadow DOM 依附的元素，但不是所有元素都可以當作 shadow host，詳細可參考 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow)，
+&emsp;&emsp;程式碼內的 host 變數就是 Shadow Host ，為 Light DOM 被 Shadow DOM 依附的元素，但不是所有元素都可以當作 shadow host，詳細可參考 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow)，
 #### Shadow Tree
 &emsp;&emsp;跟原本的 DOM tree 概念一樣，只是在 Shadow DOM 裡面
 #### Shadow Root
