@@ -9,7 +9,7 @@
  * Templates and Slots
 ## 介紹
 ### Custom Elements
-&emsp;&emsp; Web Components的十分重要的技術，允許我們定義客製化的 HTML Tag 或是擴展別人的 Tag 。
+&emsp;&emsp; Web Components 的十分重要的技術，允許我們定義客製化的 HTML Tag 或是擴展別人的 Tag 。
 #### CustomElementRegistry
 * CustomElementRegistry.define(name, constructor, options)
     * name: 我們定義的 Custom Element 使用時的名稱
@@ -52,7 +52,7 @@ const shadowRoot = host.attachShadow({ mode: 'open' });
 ## 心得
 &emsp;&emsp;剛開始學習使用 Web Components 的時候對很多功能都不懂，其中最核心的部分應該是 Shadow DOM 的概念，不過在仔細學習完一輪後，慢慢理解到 Web Components 的強大，像是跨框架的支援、針對三大語言的封裝等等，不過也有瀏覽器支援度的問題，但有很多 Polyfill 可以使用，而且也有框架的套件可以使用 Web Components 像是框架的 Components 一樣容易，關於 Web Components 的優缺點網路上有很多文章抱持著各自的想法，有興趣的可以自行搜尋。
 ## 使用  
-&emsp;&emsp;下載 Repository 或是使用 script 引入  
+&emsp;&emsp;下載 Repository 或使用 script 引入， 或直接查看[DEMO](https://dingq84.github.io/web-components-tutorial/)
 ```
    git clone https://github.com/dingq84/web-components-tutorial.git
    cd web-compnents-tutorial
