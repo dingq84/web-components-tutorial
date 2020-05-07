@@ -1,8 +1,8 @@
 # Web Components Turorial
 
 ## 前言
-&emsp;&emsp;模組化是程式開發十分重要的思維，可以增加程式靈活性、降低耦合度、重複使用減少開發時間等等，然而框架的流行，像是 React、Vue 和 Angular 等等，提供了強大的功能方便我們迅速開發流暢的 UI ，但使得學習不同框架的我們選邊站，當然可以學習一個以上的框架，但假設你學習 Vue 後，再學習 React ，你會面臨到一樣的Component，在 Vue 已經製作過，卻無法直接在 React 中使用，於是重新製作一個針對 React 專案的 Component，此時你不經思考：都是HTML、CSS、Javascript，為什麼彼此之間不能共用 Components ？所幸隨著時間的流逝， Web Components 可以解決這個問題。  
-&emsp;&emsp; Web Components 已經推出一段時間，不過初期瀏覽器支援度不高，因此接受度不高，但隨著標準化、支援度越來越高，讓我們可以製作客製化、可重複使用的 Components，且由於是單純的 HTML 、 CSS 、 Javascript ，所以可以在所有框架或是未來的新興框架使用，而且 Web Components 提供非侵入性的封裝，不用擔心引入他人的套件而影響自身專案，下面將會以 Web Components 的核心技術依序做介紹。
+&emsp;&emsp;模組化是程式開發十分重要的思維，可以增加程式靈活性、降低耦合度、重複使用減少開發時間等等，然而框架的流行，像是 React、Vue 和 Angular 等等，提供了強大的功能方便我們迅速開發流暢的 UI ，但使得學習不同框架的我們選邊站，當然可以學習一個以上的框架，但假設你學習 Vue 後，再學習 React ，你會面臨到一樣的 Component，在 Vue 已經製作過，卻無法直接在 React 中使用，於是重新製作一個針對 React 專案的 Component，此時你不經思考：都是HTML 、 CSS 、 Javascript ，為什麼彼此之間不能共用 Components ？所幸隨著時間的流逝， Web Components 可以解決這個問題。  
+&emsp;&emsp; Web Components 其實已經推出一段時間，不過初期瀏覽器支援度不高，因此接受度不高，但隨著支援度越來越高，讓我們可以製作客製化、可重複使用的 Components，且由於是單純的 HTML 、 CSS 、 Javascript ，所以可以在所有框架或是未來的新興框架使用，而且 Web Components 提供非侵入性的封裝，不用擔心引入他人的套件而影響自身專案，下面將會以 Web Components 的核心技術依序做介紹。
 > 瀏覽器支援程度： Chrome 、 Firefox 、 Edge 已全面支持， IE 和 Safari 部分支援，詳細可參考[Can I Use](https://caniuse.com/#search=web%20component)
  * Custom Elements
  * Shadow DOM
@@ -14,7 +14,7 @@
 * CustomElementRegistry.define(name, constructor, options)
     * name: 我們定義的 Custom Element 使用時的名稱
     * constructor: 我們定義的 Custom Element constructor
-    * options: 目前只有一個extends屬性，如果設定成{extends: p}，表示我們定義的 Custom Element 是p元素的延伸，所以使用 Custom Element 時就可以寫成 ```<p is='custom element name'></p>```
+    * options: 目前只有一個 extends 屬性，如果設定成 { extends : p } ，表示我們定義的 Custom Element 是 p 元素的延伸，所以使用 Custom Element 時就可以寫成 ```<p is='custom element name'></p>```
 #### Life cycle
 * connectedCallback  
 &emsp;Custom Element 首次被添加到 DOM 上面的時候觸發
