@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://dingq84.github.io/web-components-tutorial/",
   "dependencies": {
     "gulp": "^4.0.2"
   },

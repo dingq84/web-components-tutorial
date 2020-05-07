@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Components Tutorial</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    #root {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .container {
+      width: 450px;
+      height: 650px;
+      padding: 15px;
+      margin: 10px;
+      box-shadow: 2px 2px 4px 4px gray;
+      font-weight: bold;
+    }
+    pre {
+      width: 100%;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id='root'>
+    <div class='container'>
+      <custom-loginform></custom-loginform>
+      <pre>
+        
+      &lt;custom-loginform&gt;&lt;/custom-loginform&gt;
+      </pre>
+    </div>
+    <div class="container">
+      <custom-loginform dark></custom-loginform>
+      <pre>
+        
+      &lt;custom-loginform dark &gt;&lt;/custom-loginform&gt;
+      </pre>
+    </div>
+    <div class="container">
+      <custom-loginform>
+        <p>custom content</p>
+      </custom-loginform>
+      <pre>
+
+        &lt;custom-loginform &gt;
+          &lt;p&gt;
+            custom content
+          &lt;/p&gt;
+        &lt;/custom-loginform&gt;
+      </pre>
+    </div>
+  </div>
+<script src="/js/custom-loginform.min.js"></script>
+</body>
+</html>
