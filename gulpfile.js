@@ -14,6 +14,7 @@ gulp.task('watch', () => {
     }
   })
   gulp.watch('src/*.js', gulp.series('script'));
+  gulp.watch('public/*.html', gulp.series('html'));
   gulp.watch('public/*.html').on('change', sync.reload);
 });
 

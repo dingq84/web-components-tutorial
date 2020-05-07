@@ -69,7 +69,9 @@ template.innerHTML = `
   </style>
   <div class='login'>
     <h1 class='login--title'>Log In</h1>
-    <p class='login--content'>Right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
+    <slot>
+      <p class='login--content'>Right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
+    </slot>
     <form class='login--form'>
       <input class='login--form--input' autocomplete='off' name='email' type='text' placeholder='Email' />
       <p class='login--form--error'>Email格式錯誤，請再次確認</p>
@@ -88,6 +90,7 @@ class CustomLoginForm extends HTMLElement {
     super();
     this._shadowRoot = this.attachShadow({ mode: 'open' });
     this._shadowRoot.appendChild(template.content.cloneNode(true));
+
     this.$container = this._shadowRoot.querySelector('.login');
     this.$form = this._shadowRoot.querySelector('form');
     // Check the input is not empty
@@ -101,13 +104,14 @@ class CustomLoginForm extends HTMLElement {
           this.$button.disabled = Boolean(!email || !password);
         });
       });
+
     // Check the email input is match email format
     this._shadowRoot
       .querySelector('input[name="email"]')
       .addEventListener('blur', (event) => {
         event.target.setAttribute('error', isInvalidEmail(event.target.value))
       });
-    this.$p = this._shadowRoot.querySelector('p');
+
     // Submit handler
     this.$button = this._shadowRoot.querySelector('input[type="submit"]');
     this.$button.addEventListener('click', (event) => {
@@ -137,14 +141,6 @@ class CustomLoginForm extends HTMLElement {
 
   set content(value) {
     this.setAttribute('content', value);
-  }
-
-  attributeChangedCallback() {
-    this.render();
-  }
-
-  render() {
-    this.$p.innerHTML = this.content;
   }
 }
 
